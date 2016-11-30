@@ -1,0 +1,24 @@
+<!--pages/zhihu/zhihu.wxml-->
+<view class="startimg" animation="{{fade}}">
+  <image bindload="setFade" src="{{startImage}}" mode="aspectFill" class="img"></image>
+</view>
+
+<swiper indicator-dots="true"
+  autoplay="true" interval="3000" duration="1000" class="swiper">
+  <block wx:for="{{tops}}">
+    <swiper-item style="background-image:url({{item.image}});background-size:cover">
+    <view class="item-title">{{item.title}}</view>
+    </swiper-item>
+  </block>
+</swiper>
+<view class="wen" wx:for="{{news}}" bindtap="active" data-id="{{item.id}}" data-title="{{item.title}}">
+    <view class="wen-left" style="background-image:url({{item.image}});background-size:cover;"></view>
+    <view class="wen-right">{{item.title}}</view>
+</view>
+<view animation="{{ani}}" class="themes">
+    <view class="t-item" wx:for="{{them}}"  wx:key="id">
+         <navigator url="/pages/list/list?name={{item.name}}&id={{item.id}}">{{item.name}}</navigator>
+    </view>
+</view>
+<view class="circle" bindtap="tapbutton">+
+</view>

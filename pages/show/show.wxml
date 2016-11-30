@@ -1,0 +1,7 @@
+<!--pages/show/show.wxml-->
+<view class="contents">{{content}}</view>
+
+<view class="info">
+  <view class="zan">点赞人数：{{zan}}</view>
+  <navigator url="/pages/comment/comment?id={{id}}" class="ping">查看评论</navigator>
+</view>

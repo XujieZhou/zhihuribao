@@ -1,0 +1,19 @@
+<!--pages/comment/comment.wxml-->
+<block wx:for="{{short}}">
+<view class="list">
+ <view class="box">
+    <image src="{{item.image}}"></image>
+    <view class="author">{{item.author}}</view>
+ </view>  
+   <view class="content">{{item.content}}</view>
+</view>
+ </block>
+<view class="list">
+ <block wx:for="{{long}}">
+ <view class="box">
+    <image src="{{item.image}}"></image>
+    <view class="author">{{item.author}}</view>
+ </view> 
+   <view  class="content">{{item.content}}</view>
+ </block>
+</view>

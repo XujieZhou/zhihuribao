@@ -1,0 +1,8 @@
+{
+    "pages": [
+      "pages/zhihu/zhihu",
+      "pages/show/show",
+      "pages/list/list",
+      "pages/comment/comment"
+    ]
+}
